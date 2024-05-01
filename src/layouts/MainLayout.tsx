@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
-import Navbar from "../components/Navbar/Navbar";
-import SideIndicator from "../components/SideIndicator/SideIndicator";
-import PageIndicator from "../components/PageIndicator/PageIndicator";
 import CursorShadow from "../components/CursorShadow/CursorShadow";
+import Navbar from "../components/Navbar/Navbar";
+import PageIndicator from "../components/PageIndicator/PageIndicator";
+import SideIndicator from "../components/SideIndicator/SideIndicator";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="mt-24">
+    <div className="">
       <Navbar />
-      {children}
+      <div className="">{children}</div>
       <SideIndicator />
       <PageIndicator />
       <CursorShadow />

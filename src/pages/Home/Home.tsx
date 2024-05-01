@@ -1,9 +1,9 @@
-import HoverTextEffect from "../../components/HoverTextEffect/HoverTextEffect";
-import person from "../../../public/person.jpeg";
-import SocialLinks from "../../components/SocialLinks/SocialLinks";
 import { BsGithub, BsTwitter } from "react-icons/bs";
-import { RiLinkedinFill } from "react-icons/ri";
 import { CgFacebook } from "react-icons/cg";
+import { RiLinkedinFill } from "react-icons/ri";
+import person from "../../../public/person.jpeg";
+import HoverTextEffect from "../../components/HoverTextEffect/HoverTextEffect";
+import SocialLinks from "../../components/SocialLinks/SocialLinks";
 
 const data = [
   {
@@ -36,7 +36,7 @@ const data = [
 
 export default function Home() {
   return (
-    <div className="flex justify-between">
+    <div className="relative flex justify-between">
       <div className="flex flex-col justify-center gap-y-12">
         <HoverTextEffect />
         <div className="flex justify-start w-full pl-36">
@@ -47,6 +47,10 @@ export default function Home() {
       <div className="flex">
         <img src={person} width={600} />
       </div>
+      <button onClick={() => console.log("button clidked")} className="arrow">
+        <span></span>
+        <span></span>
+      </button>
     </div>
   );
 }

@@ -1,7 +1,7 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import logo from "../../../public/rajlogo.png";
 import HamburgMenu from "../HamburgMenu/HamburgMenu";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface NavLink {
   id: number;
@@ -31,7 +31,7 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="flex justify-between py-4 px-8 fixed w-full top-0 left-0">
+    <nav className="flex justify-between py-4 px-8 fixed w-full top-0 left-0 z-[999]">
       <img src={logo} height={100} width={100} />
       <HamburgMenu {...{ isMobileMenuOpen, setIsMobileMenuOpen }} />
       <MobileMenu

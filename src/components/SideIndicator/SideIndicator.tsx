@@ -1,22 +1,69 @@
-export default function SideIndicator() {
-  return (
-    <div className="flex flex-col gap-y-10 absolute right-12 z-10 top-80">
-      <div className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500">
-        <div className=" w-3 h-3 bg-pink-500 rounded-full"></div>
-      </div>
+import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
+import { useSliderContext } from "../../layouts/SliderContext";
 
-      <div className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500">
-        <div className=" w-3 h-3 bg-pink-500 rounded-full"></div>
+export default function SideIndicator() {
+  const { currentIndex, sliderRef, setCurrentIndex } = useSliderContext();
+  return (
+    <div className="flex flex-col items-center gap-y-6 absolute right-12 z-10 top-64">
+      <button onClick={() => (sliderRef?.current as any)?.slickPrev()}>
+        <IoIosArrowRoundBack className="text-5xl" />
+      </button>
+      <div className="flex flex-col gap-y-10">
+        <div
+          onClick={() => (sliderRef?.current as any)?.slickGoTo(0)}
+          className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500"
+        >
+          <div
+            className={`w-3 h-3 ${
+              currentIndex >= 1 ? "bg-pink-500" : "bg-black"
+            } rounded-full transition-smooth`}
+          ></div>
+        </div>
+
+        <div
+          onClick={() => (sliderRef?.current as any)?.slickGoTo(1)}
+          className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500"
+        >
+          <div
+            className={`w-3 h-3 ${
+              currentIndex >= 2 ? "bg-pink-500" : "bg-black"
+            } rounded-full transition-smooth`}
+          ></div>
+        </div>
+        <div
+          onClick={() => (sliderRef?.current as any)?.slickGoTo(2)}
+          className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500"
+        >
+          <div
+            className={`w-3 h-3 ${
+              currentIndex >= 3 ? "bg-pink-500" : "bg-black"
+            } rounded-full transition-smooth`}
+          ></div>
+        </div>
+        <div
+          onClick={() => (sliderRef?.current as any)?.slickGoTo(3)}
+          className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500"
+        >
+          <div
+            className={`w-3 h-3 ${
+              currentIndex >= 4 ? "bg-pink-500" : "bg-black"
+            } rounded-full transition-smooth`}
+          ></div>
+        </div>
+        <div
+          onClick={() => (sliderRef?.current as any)?.slickGoTo(4)}
+          className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500"
+        >
+          <div
+            className={`w-3 h-3 ${
+              currentIndex >= 5 ? "bg-pink-500" : "bg-black"
+            } rounded-full transition-smooth`}
+          ></div>
+        </div>
       </div>
-      <div className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500">
-        <div className=" w-3 h-3 bg-pink-500 rounded-full"></div>
-      </div>
-      <div className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500">
-        <div className=" w-3 h-3 bg-pink-500 rounded-full"></div>
-      </div>
-      <div className="bg-black w-4 h-4 rounded-full flex items-center justify-center ring-2 ring-gray-500">
-        <div className=" w-3 h-3 bg-pink-500 rounded-full"></div>
-      </div>
+      <button onClick={() => (sliderRef?.current as any)?.slickNext()}>
+        <IoIosArrowRoundForward className="text-5xl" />
+      </button>
     </div>
   );
 }

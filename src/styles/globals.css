@@ -1,4 +1,5 @@
 @import "./cursor-shadow.css";
+@import "./arrow.css";
 
 @tailwind base;
 @tailwind components;
@@ -17,6 +18,10 @@ body {
 }
 h1 {
   color: white;
+}
+
+.transition-smooth {
+  @apply transition-all duration-200 ease-in-out;
 }
 
 .transition-smooth {

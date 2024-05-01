@@ -8,8 +8,6 @@ export default function CursorShadow() {
 
     const handleMouseMove = (event: any) => {
       const { pageX, pageY } = event;
-      // console.log(clientX, clientY);
-      console.log(pageX, pageY);
       if (blob === null) return;
 
       blob.animate(
