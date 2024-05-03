@@ -6,22 +6,22 @@ import useEnhanceText from "../../hooks/useEnhanceText";
 const AboutMe = () => {
   useEnhanceText("aboutme");
   return (
-    <div className="flex h-full w-full justify-center flex-col gap-16">
-      <div className="flex flex-row items-center self-start gap-2">
-        <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2"></div>
+    <div className="flex h-full w-full justify-center flex-col xl:gap-16 gap-8">
+      <div className="flex flex-row items-center justify-center xl:self-start gap-2">
+        <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2 hidden xl:flex"></div>
         <p
-          className="text-white text-5xl font-semibold uppercase fancy"
+          className="text-white text-3xl xl:text-5xl font-semibold uppercase fancy"
           id="aboutme"
         >
           about&nbsp;me
         </p>
       </div>
 
-      <div className="flex flex-row px-32 gap-32">
+      <div className="flex flex-col xl:flex-row xl:px-32 xl:gap-32 gap-4">
         {/* hobbies */}
-        <div className="basis-1/2 flex flex-col gap-12">
+        <div className="basis-1/2 flex flex-col xl:gap-12 gap-4">
           <div>
-            <p className="text-xl">
+            <p className="text-lg xl:text-xl">
               Front End Developer with about 2 years of experience specializing
               in building responsive and visually engaging interfaces. My
               greatest strength is my collaborative spirit and my commitment to
@@ -29,10 +29,10 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="w-fit">
-            <p className="text-2xl uppercase font-semibold underline decoration-pink-500 underline-offset-8">
+            <p className="text-xl xl:text-2xl uppercase font-semibold underline decoration-pink-500 underline-offset-8">
               Hobbies & Interests
             </p>
-            <div className="grid grid-cols-2 gap-6 place-items-center mt-6">
+            <div className="grid grid-cols-4 xl:grid-cols-2 gap-6 place-items-center mt-6">
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full w-fit p-1">
                   <IoFootball className="text-3xl" />
@@ -60,7 +60,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-4 xl:gap-10">
           <div>
             <p className="text-2xl uppercase font-semibold underline decoration-pink-500 underline-offset-8">
               Experience

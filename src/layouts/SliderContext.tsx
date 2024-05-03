@@ -15,7 +15,7 @@ type Value = {
 const Context = createContext<Value | undefined>(undefined);
 
 export default function SliderContext({ children }: PropsWithChildren) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const sliderRef = useRef(null);
   const value = {
     currentIndex,
