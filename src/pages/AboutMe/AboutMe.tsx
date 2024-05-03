@@ -1,12 +1,19 @@
 import { BiSolidMoviePlay } from "react-icons/bi";
 import { IoFootball } from "react-icons/io5";
+import useEnhanceText from "../../hooks/useEnhanceText";
 
 const AboutMe = () => {
+  useEnhanceText("aboutme");
   return (
-    <div className="flex h-full w-full justify-center flex-col gap-12">
+    <div className="flex h-full w-full justify-center flex-col gap-16">
       <div className="flex flex-row items-center self-start gap-2">
         <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2"></div>
-        <p className="text-white text-5xl font-semibold uppercase">about me</p>
+        <p
+          className="text-white text-5xl font-semibold uppercase fancy"
+          id="aboutme"
+        >
+          about&nbsp;me
+        </p>
       </div>
 
       <div className="flex flex-row px-32 gap-32">

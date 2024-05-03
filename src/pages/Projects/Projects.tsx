@@ -1,3 +1,4 @@
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import useEnhanceText from "../../hooks/useEnhanceText";
 
 const Projects = () => {
@@ -12,6 +13,11 @@ const Projects = () => {
         >
           Projects
         </p>
+      </div>
+      <div className="flex flex-row gap-8 px-32">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </div>
     </div>
   );
