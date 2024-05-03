@@ -1,4 +1,5 @@
 import { BiSolidMoviePlay } from "react-icons/bi";
+import { FaBookOpen, FaHiking } from "react-icons/fa";
 import { IoFootball } from "react-icons/io5";
 import useEnhanceText from "../../hooks/useEnhanceText";
 
@@ -46,15 +47,15 @@ const AboutMe = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full w-fit p-1">
-                  <IoFootball className="text-3xl" />
+                  <FaBookOpen className="text-3xl" />
                 </div>
-                <p>Sports</p>
+                <p>Reading</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full w-fit p-1">
-                  <IoFootball className="text-3xl" />
+                  <FaHiking className="text-3xl" />
                 </div>
-                <p>Sports</p>
+                <p>Hiking</p>
               </div>
             </div>
           </div>
