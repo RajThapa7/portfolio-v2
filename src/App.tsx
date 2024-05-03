@@ -4,6 +4,7 @@ import { useSliderContext } from "./layouts/SliderContext";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import ContactMe from "./pages/ContactMe/ContactMe";
 import Home from "./pages/Home/Home";
+import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 
 export default function App() {
@@ -29,6 +30,9 @@ export default function App() {
         </div>
         <div className="flex flex-col justify-center items-center w-screen h-screen">
           <Skills />
+        </div>
+        <div className="flex flex-col justify-center items-center w-screen h-screen">
+          <Projects />
         </div>
         <div className="flex flex-col justify-center items-center w-screen h-screen">
           <ContactMe />

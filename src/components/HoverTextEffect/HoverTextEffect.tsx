@@ -44,7 +44,7 @@ export default function HoverTextEffect() {
       <div className="flex flex-col gap-y-4">
         <div className="">
           <p className="text-white text-5xl font-semibold uppercase">
-            Hello, I am Raj Thapa
+            Hello, I'm Raj Thapa
           </p>
         </div>
 

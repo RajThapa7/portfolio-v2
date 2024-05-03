@@ -47,10 +47,6 @@ export default function Home() {
       <div className="flex">
         <img src={person} width={600} />
       </div>
-      <button onClick={() => console.log("button clidked")} className="arrow">
-        <span></span>
-        <span></span>
-      </button>
     </div>
   );
 }
