@@ -2,7 +2,7 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import { useSliderContext } from "../../layouts/SliderContext";
 
 export default function SideIndicator() {
-  const { currentIndex, sliderRef, setCurrentIndex } = useSliderContext();
+  const { currentIndex, sliderRef } = useSliderContext();
   return (
     <div className="absolute xl:right-12 z-10 xl:top-64 bottom-4 right-0 w-full xl:w-fit">
       <div className="flex flex-row xl:flex-col items-center gap-6 w-fit mx-auto">

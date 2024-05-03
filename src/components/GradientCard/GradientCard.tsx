@@ -1,18 +1,18 @@
-const subtitle = document.getElementsByClassName("card-subtitle")[0];
+// const subtitle = document.getElementsByClassName("card-subtitle")[0];
 
-const createWord = (text: string, index: number) => {
-  const word = document.createElement("span");
-  word.innerHTML = `${text}`;
-  word.classList.add("card-subtitle-word");
-  word.style.transitionDelay = `${index * 40}ms`;
-  return word;
-};
+// const createWord = (text: string, index: number) => {
+//   const word = document.createElement("span");
+//   word.innerHTML = `${text}`;
+//   word.classList.add("card-subtitle-word");
+//   word.style.transitionDelay = `${index * 40}ms`;
+//   return word;
+// };
 
-const addWord = (text: string, index: number) => {
-  subtitle.appendChild(createWord(text, index));
-};
+// const addWord = (text: string, index: number) => {
+//   subtitle.appendChild(createWord(text, index));
+// };
 
-const createSubtitle = (text: string) => text.split(" ").map(addWord);
+// const createSubtitle = (text: string) => text.split(" ").map(addWord);
 
 export default function GradientCard() {
   //   createSubtitle("But in a more real sense i don't know what i am doing");

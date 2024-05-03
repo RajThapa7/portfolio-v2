@@ -7,11 +7,7 @@ interface IButtonProps extends PropsWithChildren {
   isSecondary?: boolean;
 }
 
-export default function Button({
-  className,
-  isSecondary = false,
-  children,
-}: IButtonProps) {
+export default function Button({ children }: IButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button

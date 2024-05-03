@@ -9,7 +9,7 @@ export default function HackerTextEffect({ label }: { label: string }) {
       const interval = setInterval(() => {
         event.target.innerText = event.target.innerText
           .split("")
-          .map((letter: string, index: number) => {
+          .map((_: string, index: number) => {
             if (index < iterations) {
               return event.target.dataset.value[index];
             }

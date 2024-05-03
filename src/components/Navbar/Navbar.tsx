@@ -87,7 +87,7 @@ const MobileMenu = ({
           exit="hidden"
         >
           <div className="flex flex-col gap-y-10 text-center">
-            {navLinks.map(({ id, title, link, icon }) => (
+            {navLinks.map(({ id, title, link }) => (
               <motion.div
                 key={id}
                 id="channel-link"
