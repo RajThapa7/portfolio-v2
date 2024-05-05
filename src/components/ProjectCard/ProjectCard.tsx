@@ -1,6 +1,6 @@
 const ProjectCard = () => {
   return (
-    <div className="w-96 h-fit shadow-md group shadow-gray-600 rounded-md transition-smooth hover:shadow-pink-500">
+    <div className="min-w-[384px] w-96 h-fit shadow-md group shadow-gray-600 rounded-md transition-smooth hover:shadow-pink-500">
       <img
         src="https://www.liquidplanner.com/wp-content/uploads/2019/04/HiRes-17.jpg"
         alt="project_image"

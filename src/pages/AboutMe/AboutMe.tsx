@@ -6,7 +6,7 @@ import useEnhanceText from "../../hooks/useEnhanceText";
 const AboutMe = () => {
   useEnhanceText("aboutme");
   return (
-    <div className="flex h-full w-full justify-center flex-col xl:gap-16 gap-8">
+    <div className="flex h-full w-full justify-center flex-col xl:gap-16 gap-0">
       <div className="flex flex-row items-center justify-center xl:self-start gap-2">
         <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2 hidden xl:flex"></div>
         <p
@@ -17,9 +17,9 @@ const AboutMe = () => {
         </p>
       </div>
 
-      <div className="flex flex-col xl:flex-row xl:px-32 xl:gap-32 gap-4">
+      <div className="flex flex-col md:flex-row xl:px-32 xl:gap-32 gap-4 justify-between xl:justify-normal p-8 xl:p-0">
         {/* hobbies */}
-        <div className="basis-1/2 flex flex-col xl:gap-12 gap-4">
+        <div className="basis-1/2 flex flex-col md:gap-12 gap-4">
           <div>
             <p className="text-lg xl:text-xl">
               Front End Developer with about 2 years of experience specializing
@@ -67,7 +67,7 @@ const AboutMe = () => {
             </p>
             <div className="mt-6 gap-2 flex flex-col">
               <div className="flex flex-row gap-4 items-center">
-                <div className=" from-pink-500 bg-gradient-to-tr to-purple-500 flex-col rounded-full break-words w-fit aspect-square p-3 text-sm font-semibold flex items-center justify-center">
+                <div className=" from-pink-500 bg-gradient-to-tr to-purple-500 flex-col rounded-full break-words w-fit aspect-square p-2 md:p-3 text-xs md:text-sm font-semibold flex items-center justify-center">
                   <p>May 2023</p>
                   <p>to</p>
                   <p>Present</p>
@@ -79,9 +79,9 @@ const AboutMe = () => {
                   <p>Frontend Developer</p>
                 </div>
               </div>
-              <div className="h-12 w-1 bg-white ml-11"></div>
+              <div className="h-8 md:h-12 w-1 bg-white ml-9 md:ml-11"></div>
               <div className="flex flex-row gap-4 items-center">
-                <div className=" from-pink-500 bg-gradient-to-tr to-purple-500 flex-col rounded-full break-words w-fit aspect-square p-3 text-sm font-semibold flex items-center justify-center">
+                <div className=" from-pink-500 bg-gradient-to-tr to-purple-500 flex-col rounded-full break-words w-fit aspect-square p-2 md:p-3 text-xs md:text-sm font-semibold flex items-center justify-center">
                   <p>Nov 2022</p>
                   <p>to</p>
                   <p>May 2023</p>
@@ -96,7 +96,7 @@ const AboutMe = () => {
             </div>
           </div>
           {/* education */}
-          <div>
+          <div className="hidden md:flex flex-col">
             <p className="text-2xl uppercase font-semibold underline decoration-pink-500 underline-offset-8">
               Education
             </p>
