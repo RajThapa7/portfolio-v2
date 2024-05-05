@@ -4,7 +4,7 @@ import useEnhanceText from "../../hooks/useEnhanceText";
 const Skills = () => {
   useEnhanceText("skill");
   return (
-    <div className="flex items-center h-full w-full justify-center text-3xl flex-col xl:gap-12 gap-4">
+    <div className="flex items-center h-full w-full justify-center text-3xl flex-col xl:gap-12 gap-0">
       <div className="flex flex-row items-center xl:self-start gap-2 justify-center">
         <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2 xl:flex hidden"></div>
         <p
@@ -21,7 +21,7 @@ const Skills = () => {
               className={`${hoverClass} transition-smooth rounded-full md:p-8 p-4 flex items-center justify-center`}
             >
               <p
-                className={`${iconClass} transition-smooth group-hover:text-white text-5xl md:text-7xl`}
+                className={`${iconClass} transition-smooth group-hover:text-white text-4xl xs:text-5xl md:text-7xl`}
               >
                 {icon}
               </p>

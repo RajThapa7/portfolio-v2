@@ -31,7 +31,7 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center py-4 px-8 fixed w-full top-0 left-0 z-[999]">
+    <nav className="hidden xs:flex justify-between items-center py-4 px-8 fixed w-full top-0 left-0 z-[999]">
       <img src={logo} className="md:w-[60px] md:h-[60px] w-10 h-10" />
       <HamburgMenu {...{ isMobileMenuOpen, setIsMobileMenuOpen }} />
       <MobileMenu

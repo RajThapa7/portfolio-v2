@@ -40,7 +40,7 @@ const data = [
 const ContactMe = () => {
   useEnhanceText("contact");
   return (
-    <div className="flex h-full w-full justify-center flex-col lg:gap-20 gap-6">
+    <div className="flex h-full w-full pt-8 xs:pt-0 xs:justify-center flex-col lg:gap-20 gap-6">
       <div className="flex flex-row justify-center items-center lg:self-start gap-2">
         <div className="hidden lg:flex from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2"></div>
         <p
