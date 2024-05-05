@@ -11,12 +11,12 @@ export default function Button({ children }: IButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
-      className={`relative group outline outline-1 outline-white hover:outline-pink-500 text-white rounded-md px-24 uppercase h-[68px] transition-smooth`}
+      className={`relative group outline outline-1 outline-white hover:outline-pink-500 text-white rounded-md px-24 uppercase md:h-[68px] h-14 transition-smooth overflow-hidden flex items-center justify-center`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <p
-        className={`group-hover:text-white z-10 absolute left-0 top-[23px] w-full transition-smooth font-semibold`}
+        className={`group-hover:text-white z-10 w-full transition-smooth font-semibold`}
       >
         {children}
       </p>

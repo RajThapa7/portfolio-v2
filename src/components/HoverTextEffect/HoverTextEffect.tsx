@@ -43,17 +43,17 @@ export default function HoverTextEffect() {
       <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2 mt-5 hidden xl:flex"></div>
       <div className="flex flex-col gap-y-4">
         <div className="">
-          <p className="text-white text-3xl xl:text-5xl font-semibold uppercase">
+          <p className="text-white text-3xl lg:text-5xl font-semibold uppercase">
             Hello, I'm Raj Thapa
           </p>
         </div>
 
         <div className="flex justify-center flex-col">
-          <p className="text-white font-bold text-6xl xl:text-8xl uppercase">
+          <p className="text-white font-bold text-6xl lg:text-8xl uppercase">
             I'm a <span className="text-pink-500">frontend</span>{" "}
           </p>
           <p
-            className="fancy text-white font-bold text-6xl xl:text-8xl uppercase"
+            className="fancy text-white font-bold text-6xl lg:text-8xl uppercase"
             id="channel-link"
           >
             developer

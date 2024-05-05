@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <div className="relative flex justify-between w-full h-full">
       <div className="flex flex-col justify-center items-center xl:items-start w-full ">
-        <div className="flex flex-col gap-y-12 pl-12 sm:pl-0">
+        <div className="flex flex-col gap-y-12 pl-10 sm:pl-0">
           <HoverTextEffect />
           <div className="flex w-full xl:pl-36">
             <SocialLinks data={data} />
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
       {/* image */}
       <div className="xl:flex hidden">
-        <img src={person} width={600} />
+        <img src={person} width={600} className="object-cover" />
       </div>
     </div>
   );

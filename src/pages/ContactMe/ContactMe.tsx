@@ -40,7 +40,7 @@ const data = [
 const ContactMe = () => {
   useEnhanceText("contact");
   return (
-    <div className="flex h-full w-full justify-center flex-col lg:gap-20 gap-12">
+    <div className="flex h-full w-full justify-center flex-col lg:gap-20 gap-8">
       <div className="flex flex-row justify-center items-center lg:self-start gap-2">
         <div className="hidden lg:flex from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2"></div>
         <p
@@ -82,14 +82,14 @@ const ContactMe = () => {
               type="text"
               name="firstName"
               id="firstName"
-              className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
+              className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
               placeholder="First Name"
             />
             <input
               type="text"
               name="lastName"
               id="lastName"
-              className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
+              className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
               placeholder="Last Name"
             />
           </div>
@@ -97,13 +97,13 @@ const ContactMe = () => {
             type="email"
             name="email"
             id="email"
-            className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
+            className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="Email"
           />
           <textarea
             name="message"
             id="message"
-            className=" resize-none z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
+            className=" resize-none z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="leave a message"
           />
           <Button>Send Message</Button>
