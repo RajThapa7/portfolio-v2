@@ -40,7 +40,7 @@ const data = [
 const ContactMe = () => {
   useEnhanceText("contact");
   return (
-    <div className="flex h-full w-full justify-center flex-col lg:gap-20 gap-8">
+    <div className="flex h-full w-full justify-center flex-col lg:gap-20 gap-6">
       <div className="flex flex-row justify-center items-center lg:self-start gap-2">
         <div className="hidden lg:flex from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2"></div>
         <p
@@ -50,9 +50,9 @@ const ContactMe = () => {
           Contact&nbsp;Me
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between px-8 xl:px-32 gap-12 lg:gap-0">
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-4">
+      <div className="flex flex-col lg:flex-row justify-between px-8 xl:px-32 gap-8 md:gap-12 lg:gap-0">
+        <div className="flex flex-col gap-4 md:gap-6">
+          <div className="flex flex-col gap-2 md:gap-4">
             <div className="inline-flex items-center gap-2">
               <div className="bg-pink-500 rounded-full p-2">
                 <IoMdMail className="text-xl" />

@@ -17,7 +17,7 @@ const AboutMe = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row xl:px-32 xl:gap-32 gap-4 justify-between xl:justify-normal p-8 xl:p-0">
+      <div className="flex flex-col md:flex-row xl:px-32 xl:gap-32 gap-4 justify-between xl:justify-normal p-4 md:p-8 xl:p-0">
         {/* hobbies */}
         <div className="basis-1/2 flex flex-col md:gap-12 gap-4">
           <div>
