@@ -6,7 +6,7 @@ import SideIndicator from "../components/SideIndicator/SideIndicator";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="">
+    <div className="!overflow-hidden">
       <Navbar />
       <div className="">{children}</div>
       <SideIndicator />

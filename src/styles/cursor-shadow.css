@@ -12,6 +12,19 @@
   z-index: -100;
 }
 
+@media only screen and (max-width: 1280px) {
+  #blob {
+    height: 500px;
+    aspect-ratio: 1;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #blob {
+    height: 55vw;
+    aspect-ratio: 1;
+  }
+}
+
 .animate-rotate {
   animation: rotate 20s infinite linear;
 }

@@ -80,7 +80,7 @@ const MobileMenu = ({
       {isMobileMenuOpen && (
         <motion.div
           key="mobile-menu"
-          className="absolute left-0 top-0 z-40 flex h-screen w-full flex-col items-center pb-10 pt-32 shadow-md text-gray-200 bg-black"
+          className="absolute left-0 top-0 z-40 flex h-screen w-screen flex-col items-center pb-10 pt-32 shadow-md text-gray-200 bg-black"
           variants={list}
           initial="hidden"
           animate="visible"
