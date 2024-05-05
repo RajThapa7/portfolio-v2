@@ -23,8 +23,8 @@ const navLinks: NavLink[] = [
   },
   {
     id: 2,
-    title: "About Me",
-    link: "#",
+    title: "Blog",
+    link: "https://rajthapablog.netlify.app/",
   },
 ];
 
@@ -80,7 +80,7 @@ const MobileMenu = ({
       {isMobileMenuOpen && (
         <motion.div
           key="mobile-menu"
-          className="absolute left-0 top-0 z-40 flex h-screen w-screen flex-col items-center pb-10 pt-32 shadow-md text-gray-200 bg-black"
+          className="absolute left-0 top-0 z-40 flex h-screen w-screen flex-col items-center pb-10 pt-32 shadow-md text-gray-200 bg-black bg-opacity-90"
           variants={list}
           initial="hidden"
           animate="visible"
@@ -90,11 +90,15 @@ const MobileMenu = ({
             {navLinks.map(({ id, title, link }) => (
               <motion.div
                 key={id}
-                id="channel-link"
-                className=" text-2xl lg:text-4xl fancy"
+                className="text-2xl lg:text-4xl cursor-pointer"
                 variants={item}
               >
-                <a href={link} onClick={() => setIsMobileMenuOpen(false)}>
+                <a
+                  href={link}
+                  target="_blank"
+                  className="hover:text-pink-500 transition-smooth"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
                   {title}
                 </a>
               </motion.div>
