@@ -31,8 +31,8 @@ const navLinks: NavLink[] = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <nav className="flex justify-between py-4 px-8 fixed w-full top-0 left-0 z-[999]">
-      <img src={logo} height={100} width={100} />
+    <nav className="flex justify-between items-center py-4 px-8 fixed w-full top-0 left-0 z-[999]">
+      <img src={logo} className="md:w-[60px] md:h-[60px] w-10 h-10" />
       <HamburgMenu {...{ isMobileMenuOpen, setIsMobileMenuOpen }} />
       <MobileMenu
         isMobileMenuOpen={isMobileMenuOpen}
@@ -91,7 +91,7 @@ const MobileMenu = ({
               <motion.div
                 key={id}
                 id="channel-link"
-                className="text-4xl fancy"
+                className=" text-2xl lg:text-4xl fancy"
                 variants={item}
               >
                 <a href={link} onClick={() => setIsMobileMenuOpen(false)}>

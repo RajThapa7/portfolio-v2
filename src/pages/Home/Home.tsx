@@ -37,10 +37,12 @@ const data = [
 export default function Home() {
   return (
     <div className="relative flex justify-between w-full h-full">
-      <div className="flex flex-col justify-center gap-y-12">
-        <HoverTextEffect />
-        <div className="flex justify-center xl:justify-start w-full xl:pl-36">
-          <SocialLinks data={data} />
+      <div className="flex flex-col justify-center items-center xl:items-start w-full ">
+        <div className="flex flex-col gap-y-12 pl-12 sm:pl-0">
+          <HoverTextEffect />
+          <div className="flex w-full xl:pl-36">
+            <SocialLinks data={data} />
+          </div>
         </div>
       </div>
       {/* image */}

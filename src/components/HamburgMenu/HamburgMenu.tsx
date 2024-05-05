@@ -12,7 +12,7 @@ export default function HamburgMenu({
 }: IHambugMenuProps) {
   return (
     <div
-      className="flex flex-col gap-y-2 absolute right-4 top-8 z-50"
+      className="flex flex-col gap-y-2 z-50"
       onClick={() => setIsMobileMenuOpen((prev) => !prev)}
     >
       <motion.div

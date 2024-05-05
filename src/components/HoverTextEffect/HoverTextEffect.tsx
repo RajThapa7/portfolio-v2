@@ -39,7 +39,7 @@ const rand = (min: number, max: number) =>
 export default function HoverTextEffect() {
   useEffect(() => enhance("channel-link"), []);
   return (
-    <div className="flex gap-x-4">
+    <div className="flex gap-x-5 justify-center xl:justify-start">
       <div className="from-pink-500 bg-gradient-to-tr to-purple-500 w-32 h-2 mt-5 hidden xl:flex"></div>
       <div className="flex flex-col gap-y-4">
         <div className="">
