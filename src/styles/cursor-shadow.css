@@ -12,6 +12,20 @@
   z-index: -100;
 }
 
+/* styling for chrome and safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #blob {
+    background: linear-gradient(to right, rgb(160, 13, 40), rgb(196, 11, 196));
+  }
+}
+
+/* styling for firefox */
+@-moz-document url-prefix() {
+  #blob {
+    background: linear-gradient(to right, rgb(69, 41, 46), rgb(90, 3, 90));
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   #blob {
     height: 500px;
@@ -20,8 +34,9 @@
 }
 @media only screen and (max-width: 850px) {
   #blob {
-    height: 55vw;
+    height: 100vw;
     aspect-ratio: 1;
+    animation: none;
   }
 }
 
