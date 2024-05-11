@@ -3,6 +3,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Slider from "react-slick";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import useEnhanceText from "../../hooks/useEnhanceText";
+import projectData from "./data";
 
 const settings = {
   dots: true,
@@ -63,15 +64,11 @@ const Projects = () => {
           />
         </div>
         <Slider {...settings} ref={sliderRef}>
-          <div className="!flex items-center justify-center">
-            <ProjectCard />
-          </div>
-          <div className="!flex items-center justify-center">
-            <ProjectCard />
-          </div>
-          <div className="!flex items-center justify-center">
-            <ProjectCard />
-          </div>
+          {projectData.map(({ title, link, description, id, img }) => (
+            <div className="!flex items-center justify-center" key={id}>
+              <ProjectCard {...{ title, description, link, img }} />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>
