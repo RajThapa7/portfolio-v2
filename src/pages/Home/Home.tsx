@@ -1,7 +1,7 @@
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
 import { RiLinkedinFill } from "react-icons/ri";
-import person from "../../../public/person.jpeg";
+import person from "../../../public/raj.png";
 import HoverTextEffect from "../../components/HoverTextEffect/HoverTextEffect";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 
@@ -46,8 +46,8 @@ export default function Home() {
         </div>
       </div>
       {/* image */}
-      <div className="xl:flex hidden">
-        <img src={person} width={600} className="object-cover" />
+      <div className="xl:flex hidden absolute -bottom-20 right-0">
+        <img src={person} width={550} className="object-contain" />
       </div>
     </div>
   );
