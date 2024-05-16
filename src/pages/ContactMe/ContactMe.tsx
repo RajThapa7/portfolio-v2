@@ -40,20 +40,20 @@ const data = [
 const ContactMe = () => {
   useEnhanceText("contact");
 
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
+  // const handleSubmit = (event: any) => {
+  //   event.preventDefault();
 
-    const myForm = event.target;
-    const formData = new FormData(myForm);
+  //   const myForm = event.target;
+  //   const formData = new FormData(myForm);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
-  };
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: new URLSearchParams(formData as any).toString(),
+  //   })
+  //     .then(() => alert("Thank you for your submission"))
+  //     .catch((error) => alert(error));
+  // };
 
   return (
     <div className="flex h-full w-full pt-8 xs:pt-0 xs:justify-center flex-col lg:gap-20 gap-6">
