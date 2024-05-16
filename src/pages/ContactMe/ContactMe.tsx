@@ -76,7 +76,7 @@ const ContactMe = () => {
         </div>
 
         {/* form */}
-        <div className="flex flex-col gap-5">
+        <form className="flex flex-col gap-5" data-netlify="true">
           <div className="flex flex-row gap-5">
             <input
               type="text"
@@ -106,8 +106,8 @@ const ContactMe = () => {
             className=" resize-none z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="leave a message"
           />
-          <Button>Send Message</Button>
-        </div>
+          <Button type="submit">Send Message</Button>
+        </form>
       </div>
     </div>
   );
