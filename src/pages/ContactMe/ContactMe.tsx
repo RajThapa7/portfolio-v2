@@ -39,6 +39,22 @@ const data = [
 
 const ContactMe = () => {
   useEnhanceText("contact");
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div className="flex h-full w-full pt-8 xs:pt-0 xs:justify-center flex-col lg:gap-20 gap-6">
       <div className="flex flex-row justify-center items-center lg:self-start gap-2">
@@ -76,7 +92,11 @@ const ContactMe = () => {
         </div>
 
         {/* form */}
-        <form className="flex flex-col gap-5" data-netlify="true">
+        <form
+          className="flex flex-col gap-5"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+        >
           <div className="flex flex-row gap-5">
             <input
               type="text"
