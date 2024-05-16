@@ -94,8 +94,10 @@ const ContactMe = () => {
         {/* form */}
         <form
           className="flex flex-col gap-5"
+          name="contact"
+          method="POST"
           data-netlify="true"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <div className="flex flex-row gap-5">
             <input
@@ -104,6 +106,7 @@ const ContactMe = () => {
               id="firstName"
               className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
               placeholder="First Name"
+              required
             />
             <input
               type="text"
@@ -119,12 +122,14 @@ const ContactMe = () => {
             id="email"
             className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="Email"
+            required
           />
           <textarea
             name="message"
             id="message"
             className=" resize-none z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="leave a message"
+            required
           />
           <Button type="submit">Send Message</Button>
         </form>
