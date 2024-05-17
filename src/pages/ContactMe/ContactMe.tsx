@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -40,20 +41,39 @@ const data = [
 const ContactMe = () => {
   useEnhanceText("contact");
 
-  // const handleSubmit = (event: any) => {
-  //   event.preventDefault();
+  const encode = (data: any) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
-  //   const myForm = event.target;
-  //   const formData = new FormData(myForm);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
 
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: new URLSearchParams(formData as any).toString(),
-  //   })
-  //     .then(() => alert("Thank you for your submission"))
-  //     .catch((error) => alert(error));
-  // };
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formData }),
+    })
+      .then(() => alert("Thank you for your submission"))
+      .catch((error) => alert(error));
+  };
+
+  const handleChange = (e: any) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <div className="flex h-full w-full pt-8 xs:pt-0 xs:justify-center flex-col lg:gap-20 gap-6">
@@ -97,7 +117,7 @@ const ContactMe = () => {
           name="contact"
           method="post"
           data-netlify="true"
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           <div className="flex flex-row gap-5">
             {/* for netlify form handling for jsx form we need this  */}
@@ -109,12 +129,14 @@ const ContactMe = () => {
               id="firstName"
               className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
               placeholder="First Name"
+              onChange={handleChange}
               required
             />
             <input
               type="text"
               name="lastName"
               id="lastName"
+              onChange={handleChange}
               className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
               placeholder="Last Name"
             />
@@ -123,6 +145,7 @@ const ContactMe = () => {
             type="email"
             name="email"
             id="email"
+            onChange={handleChange}
             className=" z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="Email"
             required
@@ -130,6 +153,7 @@ const ContactMe = () => {
           <textarea
             name="message"
             id="message"
+            onChange={handleChange}
             className=" resize-none z-1 w-full rounded-[10px] border-none bg-gray-100 px-4 py-3 md:py-4 outline-none focus:ring-2 ring-pink-500 text-gray-700"
             placeholder="leave a message"
             required
