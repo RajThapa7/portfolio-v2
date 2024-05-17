@@ -5,9 +5,11 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { RiLinkedinFill } from "react-icons/ri";
+import thank_you from "../../../public/thank_you.png";
 import Button from "../../components/Button";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 import useEnhanceText from "../../hooks/useEnhanceText";
+import { useModal } from "../../layouts/ModalProvider";
 
 const data = [
   {
@@ -56,6 +58,8 @@ const ContactMe = () => {
     message: "",
   });
 
+  const { openModal, closeModal } = useModal();
+
   const handleSubmit = (event: any) => {
     event.preventDefault();
 
@@ -64,8 +68,30 @@ const ContactMe = () => {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData }),
     })
-      .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
+      .then(() => {
+        openModal({
+          content: (
+            <div className="text-gray-900 w-fit flex flex-col items-center gap-6 !p-2">
+              <img src={thank_you} width={100} height={100} />
+              <p className="text-center font-semibold text-2xl">
+                Thank you for sending me a message
+              </p>
+
+              <Button
+                className="!outline-pink-500 !text-pink-500"
+                onClick={() => closeModal()}
+              >
+                OK
+              </Button>
+            </div>
+          ),
+        });
+      })
+      .catch((error) => alert(error))
+      .finally(() => {
+        setFormData({ email: "", firstName: "", message: "", lastName: "" });
+        event.target.reset();
+      });
   };
 
   const handleChange = (e: any) => {

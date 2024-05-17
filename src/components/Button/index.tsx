@@ -19,7 +19,7 @@ export default function Button({
   return (
     <button
       {...props}
-      className={`relative group outline outline-1 outline-white hover:outline-pink-500 text-white rounded-md px-24 uppercase md:h-[68px] h-14 transition-smooth overflow-hidden flex items-center justify-center`}
+      className={`${className} relative group outline outline-1 outline-white hover:outline-pink-500 text-white rounded-md px-24 uppercase md:h-[68px] h-14 transition-smooth overflow-hidden flex items-center justify-center`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
