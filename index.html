@@ -18,6 +18,20 @@
     <title>Raj Thapa | Portfolio Website</title>
   </head>
   <body>
+    <!-- for netlify form handling creating a dummy html form -->
+    <form
+      hidden
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

@@ -95,7 +95,7 @@ const ContactMe = () => {
         <form
           className="flex flex-col gap-5"
           name="contact"
-          method="POST"
+          method="post"
           data-netlify="true"
           // onSubmit={handleSubmit}
         >
