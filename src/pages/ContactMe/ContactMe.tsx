@@ -100,6 +100,9 @@ const ContactMe = () => {
           // onSubmit={handleSubmit}
         >
           <div className="flex flex-row gap-5">
+            {/* for netlify form handling for jsx form we need this  */}
+            <input type="hidden" name="contact" value="contact" />
+
             <input
               type="text"
               name="firstName"
